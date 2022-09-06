@@ -1,12 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System.Security.Cryptography.X509Certificates;
 
-namespace BrankTransactions.Models;
-
-public class TransactionDbContext : DbContext
+namespace BrankTransactions.Models
 {
-	public TransactionDbContext(DbContextOptions<TransactionDbContext> options) : base(options) { }
+    public class TransactionDbContext : DbContext
+    {
+        public TransactionDbContext(DbContextOptions<TransactionDbContext> options) : base(options) { }
 
-	public DbSet<Transaction> Transactions { get; set; }
+        public DbSet<Transaction> Transactions { get; set; }
+    }
 }
-

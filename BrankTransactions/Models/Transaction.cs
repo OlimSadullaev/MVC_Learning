@@ -1,5 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
 namespace BrankTransactions.Models
 {
@@ -8,7 +9,7 @@ namespace BrankTransactions.Models
         [Key]
         public int TransactionId { get; set; }
 
-        [Column(TypeName ="nvarchar(12)")]
+        [Column(TypeName = "nvarchar(12)")]
         public string AccountNumber { get; set; }
 
         [Column(TypeName = "nvarchar(100)")]
